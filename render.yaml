@@ -23,19 +23,19 @@ services:
     envVars:
       - key: NODENAME
         fromService:
-          type: web
+          type: pserv
           name: couchdb1
-          envVarKey: NODENAME
+          property: NODENAME
       - key: COUCHDB_PASSWORD
         fromService:
-          type: web
+          type: pserv
           name: couchdb1
-          envVarKey: COUCHDB_PASSWORD
+          property: COUCHDB_PASSWORD
       - key: COUCHDB_SECRET
         fromService:
-          type: web
+          type: pserv
           name: couchdb1
-          envVarKey: COUCHDB_SECRET
+          property: COUCHDB_SECRET
       - key: COUCHDB_USER
         value: admin
 
