@@ -1,5 +1,5 @@
 services:
-  - type: web
+  - type: pserv
     name: couchdb1
     env: docker
     envVars:
@@ -17,7 +17,7 @@ services:
       mountPath: /data/db
       sizeGB: 10
       
-  - type: web
+  - type: pserv
     name: couchdb2
     env: docker
     envVars:
