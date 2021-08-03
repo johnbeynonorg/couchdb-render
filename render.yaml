@@ -8,7 +8,10 @@ services:
       - key: COUCHDB_SECRET
         generateValue: true 
       - key: NODENAME
-        generateValue: true 
+        fromService:
+          type: pserv
+          name: couchdb1
+          property: hostport 
       - key: COUCHDB_USER
         value: admin
 
