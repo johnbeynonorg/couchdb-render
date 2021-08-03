@@ -25,17 +25,17 @@ services:
         fromService:
           type: pserv
           name: couchdb1
-          property: NODENAME
+          envVarKey: NODENAME
       - key: COUCHDB_PASSWORD
         fromService:
           type: pserv
           name: couchdb1
-          property: COUCHDB_PASSWORD
+          envVarKey: COUCHDB_PASSWORD
       - key: COUCHDB_SECRET
         fromService:
           type: pserv
           name: couchdb1
-          property: COUCHDB_SECRET
+          envVarKey: COUCHDB_SECRET
       - key: COUCHDB_USER
         value: admin
 
